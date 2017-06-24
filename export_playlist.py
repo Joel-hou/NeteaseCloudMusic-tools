@@ -3,11 +3,13 @@
 # author: houzhian@gmail.com
 # python3 required, tested in windows 10
 # usage:
-#        running this python script, you will be able to see playlist m3u format file in the current directory
+#        running this python script, you will be able to see playlist in m3u format file under the current directory
 #        how to run python scripts:
 #            if you already have python3 installed in your system and the path to executable file already added to
 #        system PATH, open cmd or powershell, change directory to the directory where export_playlist.py exists,
-#        type ./export_playlist.py, your playlist will come soon.
+#        type ./export_playlist.py, your playlist will come soon in the current directory.
+#            I suggest you download all songs in your playlist firstly, then use this script. It is conveninet, you 
+#        can import your playlist to other music player or your mp3 which support external m3u format playlist
 
 # for path operations
 import os
