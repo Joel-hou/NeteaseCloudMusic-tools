@@ -8,7 +8,7 @@
 #            if you already have python3 installed in your system and the path to executable file already added to
 #        system PATH, open cmd or powershell, change directory to the directory where export_playlist.py exists,
 #        type ./export_playlist.py, your playlist will come soon in the current directory.
-#            I suggest you download all songs in your playlist firstly, then use this script. It is conveninet, you 
+#            I suggest you download all songs in your playlist firstly, then use this script. It is convenient, you 
 #        can import your playlist to other music player or your mp3 which support external m3u format playlist
 
 # for path operations
