@@ -71,7 +71,7 @@ class ExportPlayList:
                     if detail is not None:
                         count=count + 1
                         file.writelines(u"\n#EXTINF:" + detail[0] + u"\n" + detail[1])
-        except Exception as e:
+        except Exception:
             raise
         else:
             pass
