@@ -1,6 +1,6 @@
-#coding: utf-8
+# -*- coding: utf-8 -*-
 
-# author: houzhian@gmail.com
+# author: zhian.h@qq.com
 # python3 required, tested in windows 10
 # usage:
 #        running this python script, you will be able to see playlist in m3u format file under the current directory
@@ -26,7 +26,7 @@ class ExportPlayList:
 
     def extract_playlist_name_from_json(self,jsonStr):
         playlist_detail = json.loads(jsonStr)
-        return playlist_detail["name"];
+        return playlist_detail["name"]
 
     def get_play_lists(self):
         # create a cursor object to perform sql commands
@@ -45,7 +45,7 @@ class ExportPlayList:
         my_cursor.execute("select * from web_playlist_track where pid=?",[pid])
         songs_id=[]
         for item in my_cursor.fetchall():
-            songs_id.append(item[1]);
+            songs_id.append(item[1])
         return songs_id
 
     def get_song_detail_by_tid(self,tid):
@@ -82,7 +82,7 @@ class ExportPlayList:
 
     def extract_song_name_from_json(self,jsonStr):
         songDetail = json.loads(jsonStr)
-        return songDetail["name"];
+        return songDetail["name"]
 
     def export_playlists(self):
         playlists = self.get_play_lists()
@@ -91,4 +91,5 @@ class ExportPlayList:
             self.write_playlist_to_file(item[0], item[1])
 
 if __name__ == '__main__':
-    ExportPlayList().export_playlists()
+    obj=ExportPlayList()
+    obj.export_playlists()
