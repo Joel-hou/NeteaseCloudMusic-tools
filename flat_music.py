@@ -5,14 +5,16 @@
 # python flat_music.py
 
 import io
-import os  
+import os
 import sys
-import shutil  
+import shutil
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8') #改变标准输出的默认编码
+sys.stdout = io.TextIOWrapper(
+    sys.stdout.buffer, encoding='utf-8')  # 改变标准输出的默认编码
 
 neteaseMusicPath = "D:\\houzhian\\Music\\iTunes\\iTunes Media\\Music\\"
 outputPath = "D:\\houzhian\\Music\\iTunes\\iTunes Media\\output\\"
+
 
 def stealFile(path, outputPath):
     for roots, dirs, files in os.walk(path):
@@ -25,6 +27,7 @@ def stealFile(path, outputPath):
                 pass
         for dir in dirs:
             stealFile(dir, outputPath)
+
 
 if __name__ == '__main__':
     stealFile(neteaseMusicPath, outputPath)
