@@ -46,8 +46,4 @@ def rename(path):
 
 
 if __name__ == '__main__':
-    try:
-        rename(path)
-    except Exception as e:
-        print(e)
-        pass
+    rename(path)
